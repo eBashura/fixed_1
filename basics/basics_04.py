@@ -5,14 +5,16 @@
 # Добавить элемент в список b
 # Вывести на экран оба списка
 
-a = [1,2,3,4]
-b = [19]
-#print(id(a))
-#print(id(b))
-#b = a
-#print(id(b))
-print(a)
-print(b)
+from copy import copy
+
+a = [1, 2, 3, 4]
+b = []
+print(f'first list id = {id(a)}, second list id = {id(b)}')
+b = a
+print(f'first list id = {id(a)}, second list id = {id(b)}')
+b.append(5)
+print(a, b)
+b = copy(a)
+print(f'first list id = {id(a)}, second list id = {id(b)}')
+
 # тут я сам практиковался, не знаю правильно ли получилось
-
-
