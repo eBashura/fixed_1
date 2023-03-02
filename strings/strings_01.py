@@ -7,7 +7,8 @@
 firstname = 'Иван'
 lastname = 'Иванович'
 age = '35'
-print('Привет, меня зовут ' + firstname + ' ' + lastname + ', мне ' + age + ' лет')
-print(len('Привет, меня зовут ' + firstname + ' ' + lastname + ', мне ' + age + ' лет'))
+a = 'Привет, меня зовут ' + firstname + ' ' + lastname + ', мне ' + age + ' лет'
+print(a)
+print(len(a))
 
 # с помощью фигурных скобок {} можно не расставлять дополнительно знаки вокруг lastname, firstname, age
