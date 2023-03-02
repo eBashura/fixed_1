@@ -17,5 +17,3 @@ print(my_dict['alex'])
 
 my_dict.pop('alex')
 print(my_dict)
-
-
