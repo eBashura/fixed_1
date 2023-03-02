@@ -4,3 +4,6 @@ my_list = [3, 96, 'evgeny', 9, 55, 102, 34, 99]
 print(my_list[2])
 print(my_list[4])
 print(my_list[5])
+
+#  либо можно прописать print(my_list[n], my_list[n], ...), получится тоже самое
+
