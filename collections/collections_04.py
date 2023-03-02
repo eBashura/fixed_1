@@ -2,9 +2,9 @@
 # Добавить 34 во множество.
 # Удалить 34 из множества
 
-set = {1, 99, 'evgenyBaShUrA', 'Minsk', 333}
-set.add(34)
-print(set)
+my_set = {1, 99, 'evgenyBaShUrA', 'Minsk', 333}
+my_set.add(34)
+print(my_set)
 
-set.remove(34)
-print(set)
+my_set.remove(34)
+print(my_set)
