@@ -14,7 +14,6 @@ b = a
 print(f'first list id = {id(a)}, second list id = {id(b)}')
 b.append(5)
 print(a, b)
-b = copy(a)
-print(f'first list id = {id(a)}, second list id = {id(b)}')
 
-# тут я сам практиковался, не знаю правильно ли получилось
+# b = copy(a)
+# print(f'first list id = {id(a)}, second list id = {id(b)}')
