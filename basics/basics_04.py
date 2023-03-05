@@ -5,7 +5,7 @@
 # Добавить элемент в список b
 # Вывести на экран оба списка
 
-from copy import copy
+# from copy import copy
 
 a = [1, 2, 3, 4]
 b = []
