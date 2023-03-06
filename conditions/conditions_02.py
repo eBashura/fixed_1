@@ -6,4 +6,3 @@ if 'code' in my_str:
 
 else:
     print('No')
-
