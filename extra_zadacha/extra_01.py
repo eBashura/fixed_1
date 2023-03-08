@@ -8,17 +8,24 @@
 # 7*. Найти верхнюю и нижнюю квартиль
 
 arr = [1, 2, 3, 4, 4, 4, 5, 5, 2]
-print(sum(arr))
+count = 0
+sum = 0
+while count < len(arr):
+    sum += arr[count]
+    count += 1
+print(sum)
 
-avg = sum(arr) / len(arr)
-print(avg)
-
-multiple = 1 * 2 * 3 * 4 * 4 * 4 * 5 * 5 * 2
-geometric_mean = (multiple) ** (1 / len(arr))
-print(geometric_mean)
-
-import numpy
-start_list = [1, 2, 3, 4, 4, 4, 5, 5, 2]
-b = list(numpy.array(start_list) ** 2)
-print(b)
+# print(sum(arr))
+#
+# avg = sum(arr) / len(arr)
+# print(avg)
+#
+# multiple = 1 * 2 * 3 * 4 * 4 * 4 * 5 * 5 * 2
+# geometric_mean = (multiple) ** (1 / len(arr))
+# print(geometric_mean)
+#
+# import numpy
+# start_list = [1, 2, 3, 4, 4, 4, 5, 5, 2]
+# b = list(numpy.array(start_list) ** 2)
+# print(b)
 
