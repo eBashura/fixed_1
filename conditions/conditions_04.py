@@ -8,5 +8,5 @@ if len(my_str) > 5:
     print(my_str)
 elif len(my_str) < 5:
     print("Need more!")
-if len(my_str) == 5:
+else:
     print('len str == 5')
