@@ -4,13 +4,13 @@
 a1 = float(input('Введите число №1: '))
 a2 = float(input('Введите число №2: '))
 a3 = float(input('Введите число №3: '))
-A1 = a1 * 2
-print(A1)
-A2 = a2 - 3
-print(A2)
-A3 = a3 ** 2
-print(A3)
-print(f'Сумма числе равна {A1 + A2 + A3}')
+num_1 = a1 * 2
+print(num_1)
+num_2 = a2 - 3
+print(num_2)
+num_3 = a3 ** 2
+print(num_3)
+print(f'Сумма числе равна {num_1 + num_2 + num_3}')
 
 # a1 = input('Введите число №1: ')        <---- этот вариант тестовый
 # a1 = int(a1)
