@@ -6,4 +6,3 @@ my_sum = 0
 for i in range(n, m + 1):
     my_sum += i ** 3
 print(my_sum)
-

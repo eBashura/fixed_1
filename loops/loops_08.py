@@ -3,10 +3,8 @@
 
 a = int(input('введите число a:'))
 b = int(input('введите число b:'))
-count = 0
+# count = 0
 r = range(a, b + 1)
 for i in range(a, b + 1):
     print(i)
 print(f'количество чисел равно: {len(r)}')
-
-
