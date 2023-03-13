@@ -5,7 +5,9 @@
 from random import randint
 
 my_attempts = int(input('введите число попыток: '))
-hidden_number = randint(1, 10)
+a = int(input('введите первое значение диапазона: '))
+b = int(input('введите второе значение диапазона: '))
+hidden_number = randint(a, b)
 
 for i in range(my_attempts):
     number = int(input("введите загаданное число: "))
@@ -18,5 +20,3 @@ for i in range(my_attempts):
         print('искомое число больше')
 else:
     print(f'You are the loser. Загаданное число {hidden_number}')
-
-# разобраться как вводить диапазон и чтобы искало в нем
