@@ -15,3 +15,21 @@ print(my_dict)
 # print(my_dict.keys())
 # for i in my_dict.keys():
 #     print(len(i))
+
+# keyList = list(my_dict.keys())
+# count = 0
+# while count != len(keyList):
+#     sum = keyList[count] + str(len(keyList[count]))
+#     my_dict.update({sum: my_dict[keyList[count]]})
+#     my_dict.pop(keyList[count])
+#     count += 1
+# print(my_dict)
+
+# keys = my_dict.keys()
+# print(type(keys))
+# for key in keys:
+#     new_key = key + str(len(key))
+#     my_dict[new_key] = my_dict[key]
+#     my_dict.pop(key)
+# print(my_dict)
+

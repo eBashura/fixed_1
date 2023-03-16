@@ -9,3 +9,9 @@ while i < n:
     num += (my_list[i] + 1) % 2
     i += 1
 print(num)
+
+count = 0
+for i in my_list:
+    if i % 2 == 0:
+        count += 1
+print(f'count = {count}')

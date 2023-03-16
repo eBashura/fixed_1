@@ -8,7 +8,7 @@ while True:
     if sign == '0':
         print('Вы ввели недопустимый знак, пока!')
         break
-    if sign not in ('+', '-', '*', '/'):
+    elif sign not in ('+', '-', '*', '/'):
         continue
     x = float(input('Введите значение x: '))
     y = float(input('Введите значение y: '))
@@ -24,6 +24,7 @@ while True:
             print(z)
         else:
             print('Делить на ноль нельзя!!!')
+            continue
     elif sign == '*':
         z = x * y
         print(z)

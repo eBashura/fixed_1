@@ -1,12 +1,22 @@
 # Дано число. Найти сумму и произведение его цифр.
 
-my_number = input('Введите число: ')
-my_number_1 = str(my_number)
-my_sum = 0
-my_multiple = 1
-for i in my_number_1:
-    print(int(i))
-    my_sum += int(i)
-    my_multiple *= int(i)
-print(f'Сумма цифр равна: {my_sum}')
-print(f'Произведение цифр равно: {my_multiple}')
+# for
+my_int = int(input('enter number - '))
+my_int_list = list(str(my_int))
+result_sum = 0
+result_m = 1
+for i in my_int_list:
+    result_sum += int(i)
+    result_m *= int(i)
+print(result_sum, result_m)
+
+# while
+
+result_sum = 0
+result_m = 1
+while my_int:
+    last_n = my_int % 10
+    result_sum += last_n
+    result_m *= last_n
+    my_int //= 10
+print(result_sum, result_m)
