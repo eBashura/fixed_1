@@ -7,7 +7,7 @@ for number in my_list:
         my_sum += number
 print(my_sum)
 
-# РАЗОБРАТЬСЯ КАК ПОСЧИТАТЬ СУММУ С ПОМОЩЬЮ WHILE
+
 
 # my_sum = sum([i for i in my_list if i>=10])
 # print(f'сумма элементов списка, которые больше 10: {my_sum}')
