@@ -2,11 +2,10 @@
 
 m = int(input('m = '))
 n = int(input('n = '))
-x = range(m,n+1)
+x = range(m, n + 1)
 for i in x:
-    for a in range(2,i):
+    for a in range(2, i):
         if i % a == 0:
-            print ("Число",i, "Делитель",a)
-
+            print(i, a)
 
 # не выводит красиво в одну строку
