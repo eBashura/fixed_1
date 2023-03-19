@@ -9,16 +9,7 @@ while a < 19:
 print(my_list)
 max_num = max(my_list)
 print(f'макс число равно: {max_num}')
-for a in my_list:
-    if a % 2 == 0:
-        print(f'четное число равно: {a}')
-
-# не смог заменить четные значения максимальным
-
-# for a in my_list:
-#     my_list[a] = max_num
-# print(my_list)
-
-# for a in range(0, len(my_list), 2):
-#     my_list[a] = max_num
-# print(my_list)
+for a in range(len(my_list) - 1):
+    if my_list[a] % 2 == 0:
+        my_list[a] = max_num
+print(my_list)
