@@ -37,7 +37,8 @@ for i in pupils:
         print(i)
     else:
         print(i, 'он двоечник')
+    print(f'средний балл равен: {avg_mark}')
 
-for data in pupils:
-    print(data.items())
+# for data in pupils:
+#     print(data.items())
 

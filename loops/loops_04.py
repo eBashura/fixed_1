@@ -10,7 +10,7 @@ while True:
     if int(num) % 5 == 0:
         print(count)
         continue
-    if num != stop_word:
+    else:
         count = count + int(num)
         print(count)
 print(f'сумма введенных чисел равна: {count}')
