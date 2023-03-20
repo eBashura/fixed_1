@@ -2,10 +2,15 @@
 
 m = int(input('m = '))
 n = int(input('n = '))
+dict = {}
 x = range(m, n + 1)
-for i in x:
-    for a in range(2, i):
-        if i % a == 0:
-            print(i, a)
+for number in x:
+    dict[number] = []
+    for i in range(2, number):
+        if number % i == 0:
+            dict[number].append(i)
+
+for i in dict.items():
+    print(i)
 
 # не выводит красиво в одну строку
