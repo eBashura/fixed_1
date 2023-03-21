@@ -4,10 +4,12 @@
 def my_func(name):
     print(f'Hello, {name}')
 
+
 def main():
     arr = ['Evgeny', 'Boris', 'Sanya', 'Tolik', 'Andrey']
     for name in arr:
         my_func(name)
 
+
 if __name__ == '__main__':
-   main()
+    main()
