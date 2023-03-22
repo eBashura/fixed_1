@@ -9,7 +9,7 @@ from random import randint
 
 
 def create_matrix():
-    arr = [randint(1, 10) for _ in range(10)]
+    arr = [randint(1, 10) for _ in range(5)]
     return arr
 
 
@@ -18,10 +18,10 @@ def print_matrix(arr):
 
 
 def sum_matrix(arr):
-    summ = 0
+    sum = 0
     for i in arr:
-        summ += i
-    return summ
+        sum += i
+    return sum
 
 
 def max_matrix(arr):
