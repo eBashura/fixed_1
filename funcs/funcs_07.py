@@ -6,4 +6,10 @@ def chetnie(**kwargs):
             print(key, value)
 
 
-chetnie(abcfd=2, bbbb=5, cdfagadg=6, ababab=10)
+def main():
+    chetnie(abcfd=2, bbbb=5, cdfagadg=6, ababab=10)
+
+
+if __name__ == '__main__':
+    main()
+# chetnie(abcfd=2, bbbb=5, cdfagadg=6, ababab=10)

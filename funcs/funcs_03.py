@@ -1,11 +1,16 @@
 # Написать программу для нахождения факториала.
 # Факториал натурального числа n определяется как произведение всех натуральных чисел от 1 до n включительно
 
-def factorial(n):
+def factorial(n: int) -> int:
     result = 1
     for i in range(1, n + 1):
         result *= i
-    print(result)
+    return result
 
 
-factorial(4)
+def main():
+    print(factorial(5))
+
+
+if __name__ == '__main__':
+    main()

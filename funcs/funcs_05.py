@@ -3,12 +3,17 @@
 
 
 def args_sum(*args):
+    print(args, type(args))
     sum = 0
-    for i in range(len(args)):
-        sum += args[i] * i
+    for index, number in enumerate(args):
+        sum += index * number
     return sum
 
 
-result = args_sum(2, 4, 11)
-print(f'сумма аргументов и их индексов равна: {result}')
+def main():
+    print(args_sum(2, 4, 11))
 
+
+if __name__ == '__main__':
+    main()
+# print(f'сумма аргументов и их индексов равна: {result}')
