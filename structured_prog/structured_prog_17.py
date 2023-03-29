@@ -12,7 +12,7 @@ max_num = max(my_list)
 print(f'макс число равно: {max_num}')
 
 # 1й способ
-for a in range(len(my_list) - 1):
+for a in range(len(my_list)):
     if my_list[a] % 2 == 0:
         my_list[a] = max_num
 print(my_list)
