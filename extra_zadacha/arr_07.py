@@ -2,6 +2,7 @@
 # 7*. Найти верхнюю и нижнюю квартиль
 
 arr = [1, 2, 3, 4, 4, 4, 5, 5, 2]
+arr.sort()
 print(arr)
 print(len(arr))
 index_v_dkvar = 0.75 * (len(arr) + 1)
