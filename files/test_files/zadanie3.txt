@@ -1,5 +1,4 @@
-i love coding
-coding loves me
-we love code
-code is everything
-code = code
+hi
+hello
+world
+ok
