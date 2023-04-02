@@ -3,14 +3,17 @@
 
 from random import randint
 
-my_list = []
-a = 0
-while a < 10:
-    my_list.append(randint(1, 100))
-    a += 1
-print(my_list)
+arr = [randint(1, 20) for _ in range(10)]
+print(arr)
+
 result = 0
-for a in range(len(my_list) - 1):
-    if my_list[a] < my_list[a + 1]:
-        result += 1
+flag = True
+
+for i in range(len(arr) - 1):
+    if arr[i] < arr[i + 1]:
+        if flag:
+            result += 1
+            flag = False
+    else:
+        flag = True
 print(result)
