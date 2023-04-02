@@ -12,10 +12,10 @@ def create_matrix(n: int) -> list:
     matrix = [[randint(1, 10) for _ in range(n)] for _ in range(n)]
     # matrix = []
     # for _ in range(n):
-    #     arr_2 = []
+    #     arr_in = []
     #     for _ in range(n):
-    #         arr_2.append(randint(1, 10))
-    #     matrix.append(arr_2)
+    #         arr_in.append(randint(0, 9))
+    #     matrix.append(arr_in)
     return matrix
 
 
@@ -24,44 +24,45 @@ def print_matrix(matrix: list) -> None:
         print(arr)
 
 
-def sum_matrix(matrix: list) -> int:
-    sum = 0
-    for arr in matrix:
-        for i in arr:
-            sum += i
-    print(f'сумма элементов матрицы: {sum}')
+def matrix_sum(matrix: list) -> int:
+    result = 0
     # for arr in matrix:
-    #     sum += sum(arr)
-    # result = sum([sum(arr) for arr in matrix])
-
-
-def max_num(matrix):
-    list_of_max_elem = []
+    #     for i in arr:
+    #         result += i
+    # return result
     for arr in matrix:
-        max_elem_in_arr = max(arr)
-        list_of_max_elem.append(max_elem_in_arr)
-    max_number = max(list_of_max_elem)
-    return max_number
+        result += sum(arr)
+    # result = sum([sum(arr) for arr in matrix])
+    return result
+
+
+def max_element(matrix):
+    list_of_max_elements = []
+    for arr in matrix:
+        max_element_in_arr = max(arr)
+        list_of_max_elements.append(max_element_in_arr)
+    return max(list_of_max_elements)
     # return max([max(arr) for arr in matrix])
 
 
-def min_num(matrix):
-    list_of_min_elem = []
+def min_element(matrix):
+    list_of_max_elements = []
     for arr in matrix:
-        min_elem_in_arr = min(arr)
-        list_of_min_elem.append(min_elem_in_arr)
-    min_number = min(list_of_min_elem)
-    return min_number
+        max_element_in_arr = min(arr)
+        list_of_max_elements.append(max_element_in_arr)
+    return min(list_of_max_elements)
+    # return min([min(arr) for arr in matrix])
 
 
 def main():
     matrix = create_matrix(3)
     print_matrix(matrix)
-    sum_matrix(matrix)
-    max_number = max_num(matrix)
-    print(f'максимальный элемент: {max_number}')
-    min_number = min_num(matrix)
-    print(f'минимальный элемент: {min_number}')
+    summa = matrix_sum(matrix)
+    print(summa)
+    max_elem = max_element(matrix)
+    print(f"max element = {max_elem}")
+    min_elem = min_element(matrix)
+    print(f"min element = {min_elem}")
 
 
 if __name__ == '__main__':
