@@ -5,3 +5,16 @@
 # Прочесть файл, Добавить новую позицию в конец. Удалить третью строку.
 
 import csv
+
+def reading
+
+
+def writing
+
+
+def adding
+
+
+def deleting
+
+
