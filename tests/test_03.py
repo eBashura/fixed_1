@@ -1,8 +1,14 @@
+import pytest
+
 from funcs.funcs_03 import factorial
 
 def test_factorial():
     result = factorial(3)
-    assert result == 7
+    assert result == 6
+
+def test_type_error():
+    with pytest.raises(TypeError):
+        factorial("abc")
 
 
 # def factorial(n: int) -> int:

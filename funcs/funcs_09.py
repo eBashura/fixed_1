@@ -24,7 +24,6 @@ def main():
     arr = [randint(1, 10) for _ in range(6)]
     print(arr)
     print(equal_number(arr))
-    print(counter_NUMBERS(arr))
 
 
 if __name__ == '__main__':
