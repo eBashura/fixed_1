@@ -25,3 +25,17 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+
+#2й
+# def is_power_n(k: int, n: int) -> bool:
+#     test_k = 0
+#     counrer = 1
+#     while test_k <= k:
+#         if test_k == k:
+#             return True
+#         test_k = n ** counrer
+#         counrer += 1
+#
+#
+# print(is_power_n(10, 3))

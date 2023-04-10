@@ -1,3 +1,5 @@
+# Покрыть тестами функции в funcs_03
+
 import pytest
 
 from funcs.funcs_03 import factorial

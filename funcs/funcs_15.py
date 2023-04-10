@@ -9,3 +9,7 @@ def polindrom(*args):
 
 
 polindrom("anna", "dima", "lol")
+
+
+def polindrom_2(my_str):
+    return my_str == my_str[::-1]
