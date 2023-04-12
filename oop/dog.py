@@ -27,12 +27,11 @@ class Dog:
         print(self.__master)
         return self.__master
 
-
     def get_adress(self):
         return self.__adress
 
-    def set_adress(self, new_adress):
-        return self.__adress == new_adress
+    def set_adress(self, adress):
+        return self.__adress == adress
 
 
 dog_1 = Dog(name='Bobik', height=150, weight=15, age=7, master='Boris')
@@ -59,5 +58,5 @@ dog_1.bark()
 dog_1.get_master()
 dog_2.get_master()
 print(dog_2.get_adress())
-dog_2.set_adress('Slutsk')
-dog_2.get_adress()
+dog_2.set_adress("Slutsk")  # не выводит новый адрес, который указал в set_adress
+print(dog_2.get_adress())
