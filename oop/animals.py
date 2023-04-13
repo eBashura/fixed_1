@@ -27,6 +27,9 @@ class Pet:
     def sleep(self):
         print(f'{self.name} sleeping!')
 
+    def voice(self):
+        pass
+
     # @property
     # def height(self):
     #     return self.__height
@@ -57,7 +60,7 @@ class Pet:
 
 class Dog(Pet):
 
-    def bark(self):
+    def voice(self):
         print(f'{self.name} barking!')
 
     def jump(self, x):
@@ -69,7 +72,7 @@ class Dog(Pet):
 
 class Cat(Pet):
 
-    def meow(self):
+    def voice(self):
         print(f'{self.name} meowing!')
 
     def jump(self, x):
@@ -80,6 +83,9 @@ class Cat(Pet):
 
 
 class Parrot(Pet):
+    def __init__(self, name, age, master, weight, height, species):
+        super().__init__(name, age, master, weight, height)
+        self.species = species
 
     def change_weight(self, arg=None):
         if arg:
@@ -105,16 +111,17 @@ class Parrot(Pet):
         else:
             super().jump(x)
 
+    def voice(self):
+        print(f'{self.name} chik-chirik')
+
 
 dog = Dog('Bobik', age=5, master='Evgeny', weight=20, height=50)
 cat = Cat('Tom', age=3, master='Olya', weight=4, height=25)
-parrot = Parrot('Dodik', age=2, master='Andrey', weight=3, height=30)
+parrot = Parrot('Dodik', age=2, master='Andrey', weight=3, height=30, species='AARA')
 dog.jump(0.3)
 cat.jump(2.1)
 parrot.jump(1)
 parrot.go()
-print(cat.change_weight())
-print(parrot.change_weight())
 
 # print(f'Bobik weight is {dog.weight}')
 # dog.weight = 30
