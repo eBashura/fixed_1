@@ -1,8 +1,13 @@
 # Создать файл animals.py. Создать три класса: Dog, Cat, Parrot. Атрибуты каждого класса: name, age, master. Каждый класс
 # содержит конструктор и методы: run, jump, birthday(увеличивает age на 1), sleep.
 # Класс Parrot имеет дополнительный метод fly. Cat - meow, Dog - bark.
+import random
+import string
+from abc import ABC, abstractmethod
 
-class Pet:
+
+class Pet(ABC):
+    __count = 0
 
     def __init__(self, name, age, master, weight, height):
         self.name = name
@@ -10,6 +15,11 @@ class Pet:
         self.master = master
         self.weight = weight
         self.height = height
+        Pet.__count += 1
+
+    @classmethod
+    def get_counter(cls):
+        return cls.__count
 
     @staticmethod
     def go():
@@ -27,9 +37,6 @@ class Pet:
     def sleep(self):
         print(f'{self.name} sleeping!')
 
-    def voice(self):
-        pass
-
     # @property
     # def height(self):
     #     return self.__height
@@ -45,6 +52,10 @@ class Pet:
     # @weight.setter
     # def weight(self, new_weight):
     #     self.__weight = new_weight
+    @abstractmethod
+    def voice(self):
+        raise NotImplementedError
+
     def change_weight(self, arg=None):
         if arg:
             self.weight += arg
@@ -56,6 +67,17 @@ class Pet:
             self.height += arg
         else:
             self.height += 0.2
+
+    # def __str__(self):
+    #     return f'{self.name}'
+
+    def __eq__(self, other):
+        return self.name, self.age, self.height, type(self) == other.name, other.age, other.height, type(other)
+
+    @staticmethod
+    def get_random_name():
+        result = random.choice(string.ascii_uppercase + str(random()))  #### тут доделать OOP_23
+        return result
 
 
 class Dog(Pet):
@@ -118,20 +140,17 @@ class Parrot(Pet):
 class Horse(Pet):
 
     def voice(self):
-        print(f'{self.name} rzhot')
+        print(f'{self.name} horse rzhot')
 
 
 class Donkey(Pet):
 
     def voice(self):
-        print(f'{self.name} ia-ia-ia')
+        print(f'{self.name} donkey ia-ia-ia')
 
 
-class Mule(Horse, Donkey):
-
-    def voice(self):
-        Donkey.voice(self)
-
+class Mule(Donkey, Horse):
+    pass
 
 
 dog = Dog('Bobik', age=5, master='Evgeny', weight=20, height=50)
@@ -147,6 +166,7 @@ parrot.go()
 parrot.voice()
 mule.voice()
 
+
 # print(f'Bobik weight is {dog.weight}')
 # dog.weight = 30
 # print(f'Bobik new weight is {dog.weight}')
@@ -161,3 +181,6 @@ def zhivotnie(Cat, Dog, Parrot):
 dog.voice()
 cat.voice()
 parrot.voice()
+print(mule.get_counter())
+print(Pet.get_counter())
+print(Pet.get_random_name())
