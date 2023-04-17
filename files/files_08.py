@@ -4,17 +4,20 @@
 # С помощью функций создать файл с информацией о товарах(Имя товара, цена, количество, комментарий).
 # Прочесть файл, Добавить новую позицию в конец. Удалить третью строку.
 
-import csv
-
-def reading
+from csv_utils import create, reading, adding, deleting
 
 
-def writing
+def main():
+    fields = ['name', 'price', 'count', 'description']
+    rows = [['Sweets', 4, 10, 'best'], ['Cookies', 2, 100, 'Tasty'], ['Coca-cola', 60, 10, 'Zero']]
+    create('testcsv.csv', fields, rows)
+
+    print(reading('testcsv.csv'))
+    adding('testcsv.csv', ['Fanta', 3, 10, 'Super'])
+    print(reading('testcsv.csv'))
+    deleting('testcsv.csv', 2)
+    print(reading('testcsv.csv'))
 
 
-def adding
-
-
-def deleting
-
-
+if __name__ == '__main__':
+    main()
