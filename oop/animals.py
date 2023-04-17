@@ -115,13 +115,37 @@ class Parrot(Pet):
         print(f'{self.name} chik-chirik')
 
 
+class Horse(Pet):
+
+    def voice(self):
+        print(f'{self.name} rzhot')
+
+
+class Donkey(Pet):
+
+    def voice(self):
+        print(f'{self.name} ia-ia-ia')
+
+
+class Mule(Horse, Donkey):
+
+    def voice(self):
+        Donkey.voice(self)
+
+
+
 dog = Dog('Bobik', age=5, master='Evgeny', weight=20, height=50)
 cat = Cat('Tom', age=3, master='Olya', weight=4, height=25)
 parrot = Parrot('Dodik', age=2, master='Andrey', weight=3, height=30, species='AARA')
+horse = Horse('Konik', age=5, master='EvgenyB', weight=30, height=50)
+donkey = Donkey('Osel', age=3, master='Sasha', weight=20, height=50)
+mule = Mule('Slavik', age=1, master='Vova', weight=20, height=50)
 dog.jump(0.3)
 cat.jump(2.1)
 parrot.jump(1)
 parrot.go()
+parrot.voice()
+mule.voice()
 
 # print(f'Bobik weight is {dog.weight}')
 # dog.weight = 30
@@ -129,3 +153,11 @@ parrot.go()
 # print(f'Bobik height is {dog.height}')
 # dog.height = 60
 # print(f'Bobik new height is {dog.height}')
+
+def zhivotnie(Cat, Dog, Parrot):
+    list_of_animals = ['dog', 'cat', 'parrot']
+
+
+dog.voice()
+cat.voice()
+parrot.voice()
