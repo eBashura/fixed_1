@@ -1,6 +1,7 @@
 # Создать файл animals.py. Создать три класса: Dog, Cat, Parrot. Атрибуты каждого класса: name, age, master. Каждый класс
 # содержит конструктор и методы: run, jump, birthday(увеличивает age на 1), sleep.
 # Класс Parrot имеет дополнительный метод fly. Cat - meow, Dog - bark.
+
 import random
 import string
 from abc import ABC, abstractmethod
@@ -76,7 +77,7 @@ class Pet(ABC):
 
     @staticmethod
     def get_random_name():
-        result = random.choice(string.ascii_uppercase + str(random()))  #### тут доделать OOP_23
+        result = random.choice(string.ascii_uppercase) + '-' + str(random.randint(1, 99))
         return result
 
 
@@ -181,6 +182,7 @@ def zhivotnie(Cat, Dog, Parrot):
 dog.voice()
 cat.voice()
 parrot.voice()
-print(mule.get_counter())
+# print(mule.get_counter())
 print(Pet.get_counter())
+print(Pet.get_random_name())
 print(Pet.get_random_name())
