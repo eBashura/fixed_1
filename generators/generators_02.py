@@ -1,21 +1,19 @@
 # Создать бесконечный генератор случайных чисел. Генератор должен принимать диапазон случайных чисел и смещение
+import random
 from random import randrange
 from time import sleep
 
 
-def create_generator():
-    a = int(input('a = '))
-    b = int(input('b = '))
-    d = int(input('diff = '))
+def create_generator(a=1, b=10, d=0):
     while True:
-        yield randrange(a, b, d)
-        yield randrange(a + d, b + d, d)
-        # yield range(a + d, b + d, d)
+        yield random.randint(a, b)
         sleep(1)
+        a += d
+        b += d
 
 
-my_generator = create_generator()
-print(my_generator)
-for a, b in my_generator:
-    print(f'{a} - {b}')
+for i in create_generator(-100, 100, 10):
+    print(i)
+    if i == 1:
+        break
 # пока думаю над этим, не получается
