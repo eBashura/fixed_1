@@ -4,3 +4,5 @@
 Реализовать программу в виде раздельных модулей(models.py, business_logic.py, ui.py, main.py).
 """
 
+book
+table
