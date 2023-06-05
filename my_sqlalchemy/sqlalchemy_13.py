@@ -4,10 +4,20 @@
 
 from school.models import session, Book, Student
 
-session.add_all([Book('one', 35),
-                 Book(name='two', pages=350),
-                 Book('-3', 70),
-                 Book('Math', 120),
-                 Book('English', 300)]
-                )
+arr = [
+    Book('one', 35),
+    Book(name='two', pages=500),
+    Book('-3', 70),
+    Book('Math', 120),
+    Book('English', 300)
+]
+
+session.add_all(arr)
+session.commit()
+students_all = session.query(Student).all()
+books_all = session.query(Book).all()
+
+for book in books_all:
+    book.students = students_all
+
 session.commit()
