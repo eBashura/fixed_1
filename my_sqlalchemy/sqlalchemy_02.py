@@ -10,7 +10,7 @@ with engine.connect() as connection:
              ('harry', 600, 'Rolling', 35, 2001),
              ('skot', 300, 'Oryel', 30, 1956),
              ('norvegian wood', 200, 'murakami', 40, 1995),
-             ('dva kapitana', 500, 'kaverin', 20, 1955);
+             ('dva kapitana', 500, 'kaverin', 20, 1955)
             """
     query = text(insert_query)
 

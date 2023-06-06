@@ -49,4 +49,3 @@ with engine.connect() as connection:
     except SQLAlchemyError as e:
         # Обработка ошибки и откат транзакции в случае исключения
         transaction.rollback()
-        
