@@ -1,3 +1,5 @@
+# Создать сайт. При запросе на домашнюю страницу отображается текущая дата.
+
 from flask import Flask
 from datetime import datetime
 
