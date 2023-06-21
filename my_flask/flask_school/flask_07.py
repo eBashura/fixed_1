@@ -25,10 +25,11 @@ class Group(db.Model):
 
 class Student(db.Model):
     id = db.Column('id', db.Integer, primary_key=True)
-    firstname = db.Column(db.String(100))
+    # firstname = db.Column(db.String(100))
     lastname = db.Column(db.String(100))
     group_id = db.Column(db.Integer, ForeignKey(Group.id), nullable=True)
     group = relationship('Group', foreign_keys='Student.group_id', backref='student')
+
 
 @app.route('/')
 def read_group():
@@ -66,6 +67,47 @@ def delete_group():
     group.delete()
     db.session.commit()
     return redirect(url_for('read_group'))
+
+
+"""Students side"""
+
+
+@app.route('/')
+def read_student():
+    data = Student.query.all()
+    return render_template('index.html', students=data)
+
+
+@app.route('/add_student/', methods=['POST', 'GET'])
+def add_student():
+    if request.method == 'GET':
+        return render_template('add_student.html')
+    else:
+        student = Student(lastname=request.form['lastname'])
+        db.session.add(student)
+        db.session.commit()
+        return redirect(url_for('read_student'))
+
+
+@app.route('/update_student', methods=['POST', 'GET'])
+def update_student():
+    if request.method == 'GET':
+        student_id = request.args.get('student_id')
+        return render_template('update_student.html', student_id=student_id)
+    else:
+        student = db.session.query(Student).filter_by(id=request.args.get('student_id')).first()
+        student.lastname = request.form['lastname']
+        db.session.commit()
+        return redirect(url_for('read_student'))
+
+
+@app.route('/delete_student/')
+def delete_student():
+    student_id = request.args.get('student_id')
+    student = db.session.query(Student).filter_by(id=student_id)
+    student.delete()
+    db.session.commit()
+    return redirect(url_for('read_student'))
 
 
 if __name__ == '__main__':
