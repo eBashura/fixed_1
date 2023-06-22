@@ -7,33 +7,23 @@
 <body>
 <a href="{{url_for('add_group')}}">to add group - press these link</a>
 <p>
-<a href="{{url_for('add_student')}}">to add student - press these link</a>
-<p>
 
 <table border="1">
     <tr>
         <td>group's id</td>
         <td>group's fullname</td>
-        <td>student's id</td>
-        <td>student's lastname</td>
         <td></td>
     </tr>
     {% for group in groups %}
-    {% for student in students %}
     <tr>
         <td>{{ group.id }}</td>
-        <td>{{ group.fullname }}</td>
-        <td>{{ student.id }}</td>
-        <td>{{ student.lastname }}</td>
+        <td><a></a>{{ group.fullname }}</td>
         <td><a href="{{url_for('update_group', group_id= group.id) }}"> press here to update </a></td>
         <td><a href="{{url_for('delete_group', group_id= group.id) }}"> press here to delete </a></td>
-        <td><a href="{{url_for('update_student', student_id= student.id) }}"> press here to update </a></td>
-        <td><a href="{{url_for('delete_student', student_id= student.id) }}"> press here to delete </a></td>
 
     </tr>
 
     {% endfor %}
-{% endfor %}
 </table>
 
 </body>

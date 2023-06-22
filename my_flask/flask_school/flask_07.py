@@ -72,21 +72,24 @@ def delete_group():
 """Students side"""
 
 
-@app.route('/')
-def read_student():
-    data = Student.query.all()
-    return render_template('index.html', students=data)
+@app.route('/students/<group_id>')
+def read_student(group_id):
+    students = Student.query.filter_by(group_id=group_id)
+    return render_template('index_student.html', students=students, group_id=group_id)
 
 
 @app.route('/add_student/', methods=['POST', 'GET'])
 def add_student():
     if request.method == 'GET':
-        return render_template('add_student.html')
+        group_id = request.args.get('group_id')
+        return render_template('add_student.html', group_id=group_id)
     else:
-        student = Student(lastname=request.form['lastname'])
+        group_id=request.args.get('group_id')
+        student = Student(firstname=request.form['firstname'], lastname=request.form['lastname'],
+                          group_id=group_id)
         db.session.add(student)
         db.session.commit()
-        return redirect(url_for('read_student'))
+        return redirect(url_for('students', group_id=group_id))
 
 
 @app.route('/update_student', methods=['POST', 'GET'])
