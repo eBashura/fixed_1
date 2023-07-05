@@ -16,4 +16,3 @@ for i in create_generator(-100, 100, 10):
     print(i)
     if i == 1:
         break
-# пока думаю над этим, не получается

@@ -14,3 +14,5 @@ my_generator = create_generator()
 print(my_generator)
 for i in my_generator:
     print(i)
+    if i == 0:
+        break
